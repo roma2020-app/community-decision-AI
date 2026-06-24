@@ -42,6 +42,6 @@ for i in {1..30}; do
 done
 
 # 4. Start Frontend Streamlit Server in foreground
-echo "📊 Starting Streamlit Frontend Dashboard on port 8501..."
+echo "📊 Starting Streamlit Frontend Dashboard on port 7860..."
 cd "$PROJECT_ROOT/frontend"
-python -m streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+python -m streamlit run app.py --server.port 7860 --server.address 0.0.0.0
