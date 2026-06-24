@@ -1,0 +1,357 @@
+/* Custom CSS for Community Decision Intelligence Platform */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Global Font Override */
+html, body, [class*="css"], .stApp {
+    font-family: 'Outfit', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Premium Dark-Glowing Mesh Background */
+.stApp {
+    background-color: #04020f !important;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 60%),
+        radial-gradient(at 50% 0%, hsla(244, 62%, 15%, 0.3) 0, transparent 60%),
+        radial-gradient(at 100% 0%, hsla(285, 60%, 15%, 0.25) 0, transparent 60%),
+        radial-gradient(at 0% 100%, hsla(244, 62%, 10%, 0.3) 0, transparent 60%),
+        radial-gradient(at 100% 100%, hsla(253, 16%, 5%, 1) 0, transparent 60%) !important;
+    color: #F3F4F6 !important;
+}
+
+/* Sidebar styling overrides */
+[data-testid="stSidebar"] {
+    background-color: #030209 !important;
+    border-right: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Sidebar divider line color */
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Sidebar Navigation Links (Resolves Dark Text Readability Issue) */
+[data-testid="stSidebarNav"] li a {
+    color: #9CA3AF !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border-radius: 8px !important;
+    margin: 2px 10px !important;
+    padding: 8px 12px !important;
+}
+
+[data-testid="stSidebarNav"] li a:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+[data-testid="stSidebarNav"] li a[aria-current="page"] {
+    color: #FFFFFF !important;
+    background-color: rgba(99, 102, 241, 0.25) !important;
+    border-left: 4px solid #6366F1 !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stSidebarNav"] li a span {
+    color: inherit !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+/* Body Text Readability Improvements */
+.stMarkdown, .stMarkdown p, .stMarkdown li, .stMarkdown span {
+    color: #E2E8F0 !important;
+    line-height: 1.6 !important;
+}
+
+.stMarkdown strong, .stMarkdown b {
+    color: #FFFFFF !important;
+}
+
+/* Streamlit Input & Widget Labels */
+.stWidgetLabel p, label[data-testid="stWidgetLabel"] {
+    color: #E2E8F0 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+/* Tabs styling */
+button[data-baseweb="tab"] p {
+    color: #9CA3AF !important;
+    transition: color 0.3s ease !important;
+}
+
+button[aria-selected="true"][data-baseweb="tab"] p {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(15, 23, 42, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    margin-bottom: 20px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.glass-card:hover {
+    border-color: rgba(129, 140, 248, 0.4) !important;
+    box-shadow: 0 8px 30px 0 rgba(99, 102, 241, 0.2) !important;
+    transform: translateY(-4px) scale(1.005) !important;
+}
+
+/* Custom Metric Cards Grid */
+.metric-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(135deg, rgba(23, 28, 48, 0.6) 0%, rgba(13, 17, 33, 0.6) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 14px !important;
+    padding: 18px 22px !important;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(129, 140, 248, 0.3) !important;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15) !important;
+}
+
+.metric-card.primary {
+    border-left: 5px solid #6366F1 !important;
+}
+
+.metric-card.success {
+    border-left: 5px solid #10B981 !important;
+}
+
+.metric-card.warning {
+    border-left: 5px solid #F59E0B !important;
+}
+
+.metric-card.danger {
+    border-left: 5px solid #EF4444 !important;
+}
+
+.metric-title {
+    font-size: 12px;
+    color: #9CA3AF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    font-size: 26px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.metric-subtitle {
+    font-size: 11px;
+    color: #6B7280;
+}
+
+/* Headers and text styling with gradients */
+h1 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    background: linear-gradient(135deg, #FFFFFF 30%, #A5B4FC 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 10px !important;
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #E2E8F0 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+}
+
+h3, h4, h5 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #EEF2F6 !important;
+    font-weight: 500 !important;
+}
+
+/* Custom interactive buttons with pulse shadows */
+.stApp button {
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    font-family: 'Outfit', sans-serif !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.stApp button:hover {
+    background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.stApp button:active {
+    transform: translateY(1px) !important;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Force all text/labels inside any button to be high-contrast white */
+.stApp button p, 
+.stApp button span, 
+.stApp button label {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Specific styling for primary button indicators */
+.stApp button[data-testid="baseButton-primary"] {
+    background: linear-gradient(135deg, #818CF8 0%, #6366F1 100%) !important;
+}
+
+
+
+/* Custom status indicators/badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-badge.success {
+    background-color: rgba(16, 185, 129, 0.12) !important;
+    color: #34D399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.status-badge.info {
+    background-color: rgba(59, 130, 246, 0.12) !important;
+    color: #60A5FA !important;
+    border: 1px solid rgba(59, 130, 246, 0.25) !important;
+}
+
+.status-badge.warning {
+    background-color: rgba(245, 158, 11, 0.12) !important;
+    color: #FBBF24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+.status-badge.danger {
+    background-color: rgba(239, 68, 68, 0.12) !important;
+    color: #F87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.25) !important;
+}
+
+/* Custom Expanders styling */
+.stExpander {
+    background: rgba(15, 23, 42, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.stExpander:hover {
+    border-color: rgba(129, 140, 248, 0.25) !important;
+}
+
+/* File Uploader styling and high-contrast labels */
+div[data-testid="stFileUploader"] {
+    background: rgba(15, 23, 42, 0.4) !important;
+    border: 2px dashed rgba(99, 102, 241, 0.35) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+div[data-testid="stFileUploader"]:hover {
+    border-color: rgba(99, 102, 241, 0.7) !important;
+    background: rgba(15, 23, 42, 0.55) !important;
+}
+
+div[data-testid="stFileUploader"] section {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+    padding: 15px !important;
+}
+
+/* File Uploader text overrides */
+div[data-testid="stFileUploader"] section [data-testid="stMarkdownContainer"] p,
+div[data-testid="stFileUploader"] section span {
+    color: #D1D5DB !important;
+}
+
+div[data-testid="stFileUploader"] label {
+    color: #EEF2F6 !important;
+    font-weight: 600 !important;
+}
+
+/* Streamlit Info, Success, Warning, Error alerts styling for high contrast and readability */
+div[data-testid="stAlert"] {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] p,
+div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] li,
+div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] span {
+    color: #EEF2F6 !important;
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+}
+
+
+/* Pandas Dataframes */
+.dataframe {
+    background-color: rgba(13, 17, 33, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+}
+
+/* Custom scrollbars for a premium look */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(10, 10, 20, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.4);
+}
