@@ -35,4 +35,3 @@ def send_assistant_message(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An error occurred while generating the assistant response: {str(e)}"
         )
-
