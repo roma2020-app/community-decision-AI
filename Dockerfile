@@ -25,7 +25,7 @@ COPY . .
 RUN chmod +x startup.sh
 
 # Expose ports: 8000 for FastAPI, 8501 for Streamlit
-EXPOSE 8000 8501
+EXPOSE 8000 7860
 
 # Execute startup.sh to launch both services concurrently
 ENTRYPOINT ["./startup.sh"]
