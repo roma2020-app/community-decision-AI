@@ -1,0 +1,15 @@
+{
+  "name": "community-decision-intelligence-platform",
+  "version": "1.0.0",
+  "description": "AI-Powered Community Decision Intelligence Platform",
+  "main": "frontend/app.py",
+  "scripts": {
+    "backend": "powershell -Command \"cd backend; $env:DATABASE_URL='community.db'; python -m uvicorn app.main:app --host 127.0.0.1 --port 8000\"",
+    "frontend": "powershell -Command \"cd frontend; python -m streamlit run app.py\"",
+    "dev": "npx concurrently \"npm run backend\" \"npm run frontend\"",
+    "test": "powershell -Command \"python -m unittest discover -s backend -p 'test_*.py'\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

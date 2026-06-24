@@ -1,0 +1,23 @@
+area,complaints,traffic,aqi,timestamp
+Downtown,12,High,140,2026-06-23 12:00:00
+Northside,8,Medium,75,2026-06-23 12:00:00
+West End,25,85.0,210,2026-06-23 12:00:00
+East Gate,3,Low,40,2026-06-23 12:00:00
+Southside,15,45.5,90,2026-06-23 12:00:00
+Metro Hub,30,High,180,2026-06-23 12:00:00
+Riverfront,14,Low,55,2026-06-23 12:00:00
+Green Valley,2,Low,25,2026-06-23 12:00:00
+Industrial Zone,35,High,260,2026-06-23 12:00:00
+Academic District,9,Medium,65,2026-06-23 12:00:00
+Old Town,18,35.0,110,2026-06-23 12:00:00
+Harbor View,7,Low,50,2026-06-23 12:00:00
+Central Park,5,15.0,35,2026-06-23 12:00:00
+Sunset Hills,4,20.0,45,2026-06-23 12:00:00
+Lakeview,11,Medium,80,2026-06-23 12:00:00
+Broadway,22,High,155,2026-06-23 12:00:00
+Financial District,17,80.0,125,2026-06-23 12:00:00
+Tech Park,10,70.0,95,2026-06-23 12:00:00
+Uptown,13,Medium,85,2026-06-23 12:00:00
+Midtown,28,High,170,2026-06-23 12:00:00
+Airport Plaza,20,95.0,220,2026-06-23 12:00:00
+Station District,24,88.5,190,2026-06-23 12:00:00
