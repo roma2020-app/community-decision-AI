@@ -20,7 +20,7 @@ CDIP calculates a multi-indicator priority risk index, ranks municipal wards by 
 
 ---
 
-## 🏆 Hackathon Judging Guide
+
 
 ### 🎯 Impact & Value Proposition
 * **Business Value**: Maximizes municipal operational efficiency. By prioritizing complaint response based on risk instead of standard first-in-first-out queues, cities reduce infrastructure repair backlogs by up to 35% and minimize legal liabilities from environmental hazards.
@@ -180,7 +180,7 @@ Follow these steps to set up the CDIP platform on your local machine.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/community-decision-intelligence.git
+git clone https://github.com/roma2020-app/community-decision-intelligence.git
 cd community-decision-intelligence
 ```
 
@@ -222,7 +222,7 @@ DB_PORT=5432
 DB_NAME=community_db
 
 # Local SQLite Database Path Fallback (Set this for quick local runs)
-DATABASE_URL=sqlite:///c:/absolute/path/to/backend/community.db
+DATABASE_URL=sqlite:///community.db
 
 # Google Cloud Configuration
 GCP_PROJECT=your-gcp-project-id
