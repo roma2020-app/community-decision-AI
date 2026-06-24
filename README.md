@@ -1,3 +1,11 @@
+
+### Live Demo
+
+Explore the deployed application here:
+https://romalearner-community-ai.hf.space/
+
+This demo showcases the Community Decision Intelligence Platform (CDIP) and its key features.
+
 # Community Decision Intelligence Platform (CDIP)
 
 Empowering local leadership and municipal authorities with AI-driven predictive risk assessment, decision prioritization, and contextual policy recommendations.
@@ -87,14 +95,14 @@ Backend:
 • Pydantic
 
 Database:
-• AlloyDB PostgreSQL
+• AlloyDB/SQLLITE PostgreSQL
 
 AI:
 • Vertex AI Gemini
 • Prompt Engineering
 
-Cloud:
-• Google Cloud Run
+Deployment:
+• Hugging Face
 • Docker
 • GitHub
 
@@ -335,19 +343,24 @@ EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-#### Build & Deploy to Google Cloud Run
-Set your project and deploy using gcloud CLI:
-```bash
-# Build backend container
-gcloud builds submit --tag gcr.io/your-project-id/cdip-backend ./backend
 
-# Deploy Backend to Cloud Run
-gcloud run deploy cdip-backend \
-    --image gcr.io/your-project-id/cdip-backend \
-    --platform managed \
-    --region us-central1 \
-    --allow-unauthenticated
+#### Build & Deploy on Hugging Face Spaces
+
+Host the application using Hugging Face Spaces:
+
+```bash
+# Create a Hugging Face Space
+# Connect your repository
+
+git add .
+git commit -m "Deploy application"
+git push origin main
 ```
+
+Hugging Face Spaces automatically builds and deploys the application after each push.
+
+**Live Demo:** https://romalearner-community-ai.hf.space/
+
 
 ---
 
