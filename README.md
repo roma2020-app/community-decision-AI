@@ -8,7 +8,7 @@ This demo showcases the Community Decision Intelligence Platform (CDIP) and its 
 
 # 🏙️ Community Decision Intelligence Platform (CDIP)
 
-> **Empowering Local Leadership with AI-Driven Decision Insights**
+ An AI-powered decision support agent built with Google Gemini that analyzes community datasets, performs contextual reasoning, generates risk assessments, and recommends evidence-based policy actions for municipal decision-makers
 
 Community Decision Intelligence Platform (CDIP) is an AI-powered decision support system that helps municipalities and local governments transform public datasets into actionable insights. By combining interactive dashboards, predictive risk analysis, and Generative AI, the platform enables data-driven policy planning and resource prioritization.
 
@@ -21,6 +21,33 @@ CDIP enables administrators to upload community datasets, analyze key indicators
 The platform consists of a **FastAPI backend**, a **Streamlit frontend**, an **SQLite database**, and **Google Gemini** for contextual AI assistance.
 
 ---
+
+The Community Intelligence Agent analyzes uploaded community datasets, evaluates risk indicators, and generates explainable policy recommendations using Google Gemini. It acts as an AI decision-support assistant for municipal administrators by transforming structured data into actionable insights.
+
+## 📌 Responsibilities
+📂 Analyze uploaded CSV datasets
+📊 Calculate community risk levels
+⚠️ Identify high-risk areas
+💡 Generate AI-powered policy recommendations
+📝 Produce executive summaries
+💬 Answer contextual questions through the AI Assistant
+
+## 📌 Agent Workflow
+
+Upload Dataset
+      │
+      ▼
+Community Intelligence Agent
+      │
+      ├── Validate Data
+      ├── Analyze Metrics
+      ├── Assess Risk
+      ├── Generate Insights
+      ├── Recommend Actions
+      └── Answer User Queries
+      │
+      ▼
+Decision Dashboard
 
 ## ✨ Features
 
