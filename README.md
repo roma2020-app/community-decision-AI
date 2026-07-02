@@ -22,9 +22,9 @@ This gap results in delayed response times, inefficient budget spending, and unm
 
 ## 💡 Solution Overview
 
-The **Community Decision Intelligence Platform (CDIP)** is a senior-architected, hackathon-ready platform that consolidates civic indicators (complaints, traffic, AQI) into a centralized, modern Command Center. 
+The **Community Decision Intelligence Platform (CDIP)** is a senior-architected, platform that consolidates civic indicators (complaints, traffic, AQI) into a centralized, modern Command Center. 
 
-CDIP calculates a multi-indicator priority risk index, ranks municipal wards by urgency, and leverages Google Cloud's Vertex AI (Gemini 1.5 Flash) to generate actionable policy plans and budget estimations. By combining **FastAPI**, **AlloyDB PostgreSQL**, and **Streamlit**, CDIP translates complex public datasets into immediate, visual, and conversational decision intelligence.
+CDIP calculates a multi-indicator priority risk index, ranks municipal wards by urgency, and leverages Google Cloud's Vertex AI (Gemini 1.5 Flash) to generate actionable policy plans and budget estimations. By combining **FastAPI**, **SQLLite**, and **Streamlit**, CDIP translates complex public datasets into immediate, visual, and conversational decision intelligence.
 
 ---
 
@@ -35,22 +35,8 @@ CDIP calculates a multi-indicator priority risk index, ranks municipal wards by 
 * **Community Benefits**: Improves general public health and quality of life. Citizens in high-risk zones receive faster response times for structural complaints, cleaner localized air quality via school zone emission restrictions, and fewer traffic bottlenecks near residential areas.
 * **Measurable Impact**: Integrates environmental, structural, and transit metrics into a single priority index, enabling city planners to make objective, data-backed decisions in seconds rather than weeks.
 
-### 💡 Innovation & Technical Scalability
-* **Innovation**: Unifies disparate urban indicators under an automated risk-calculation algorithm that operates in real-time. Directs the calculated priority scores directly into generative LLMs to produce cost-estimated, context-aware policy suggestions.
-* **Scalability**: Designed with stateless microservices (FastAPI) and deployable on **Google Cloud Run** to auto-scale on demand. Utilizes AlloyDB connection pools to easily handle high-scale ingestion of large municipal data streams.
-* **Vector Search RAG**: Employs AlloyDB's built-in vector search integration to perform Retrieval-Augmented Generation (RAG) on historical policy logs, providing grounded answers to stakeholder queries.
 
-### 🛡️ Responsible AI
-* **Safety Filters**: Configured with strict safety settings in Vertex AI to prevent toxic, biased, or harmful urban policy recommendations.
-* **High-Fidelity Deterministic Fallbacks**: Implements rule-based mathematical calculations (via `csv_processor.py`) that serve as deterministic backups, ensuring the dashboard remains 100% accurate and operational even if connection or AI credentials fail.
-* **Review Loop**: Features administrative approval toggles ("Approve", "Defer", "Reset") on recommended actions, keeping human planners in the loop before municipal funds are allocated.
-
-### ☁️ Google Cloud Services & Justifications
-* **Google Cloud Vertex AI (Gemini 1.5 Flash)**: Used for generating policy directives and conversational chat. Chosen for its large context window, rapid token throughput, and JSON schema-enforcement capabilities.
-* **AlloyDB for PostgreSQL**: Used as the relational database engine. Chosen for its enterprise-grade performance, auto-scaling capabilities, and built-in vector database extensions for RAG searching.
-* **Google Cloud Run**: Used to host the backend API and frontend dashboard. Chosen for its serverless, zero-maintenance scale-to-zero container hosting.
-
-### 🚶 Demo Workflow (Step-by-Step for Judges)
+### 🚶 Demo Workflow 
 1. **Homepage Introduction**: Start at the landing page which displays platform capabilities and the system connection status.
 2. **Ingest Dataset**: Go to the **Data Upload** tab and upload a civic indicators CSV. Watch the uploader preview the rows and run duplicate check filtering.
 3. **Explore Dashboard**: Go to the **Dashboard** page to view live city KPIs. Verify that the **Critical Area Hotspot** card dynamically displays the neighborhood with the highest computed risk (e.g., *Industrial Zone*).
@@ -211,7 +197,7 @@ source .venv/bin/activate
 ```bash
 python -m pip install --upgrade pip
 python -m pip install -r backend/requirements.txt
-python -m pip install -r frontend/requirements.txt
+
 ```
 *(If `requirements.txt` is not present, run: `python -m pip install fastapi uvicorn sqlalchemy pg8000 pydantic requests streamlit pandas plotly`)*
 
@@ -232,13 +218,7 @@ DB_NAME=community_db
 # Local SQLite Database Path Fallback (Set this for quick local runs)
 DATABASE_URL=sqlite:///community.db
 
-# Google Cloud Configuration
-GCP_PROJECT=your-gcp-project-id
-GCP_LOCATION=us-central1
-GEMINI_MODEL=gemini-1.5-flash
 
-# Simulation Mode Toggle (True bypasses GCP authentication requirement)
-SIMULATION_MODE=true
 ```
 
 ---
